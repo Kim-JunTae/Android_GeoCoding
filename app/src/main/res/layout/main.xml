@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:src="@drawable/position"
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout01"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp">
+        <TextView
+            android:text="주소/지명"
+            android:textSize="16dp"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"/>
+        <EditText
+            android:id="@+id/address"
+            android:hint="주소 또는 지명을 입력하세요"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"/>
+        <Button
+            android:text="검색"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:onClick="transformFromAddress"/>
+    </LinearLayout>
+
+    <Button
+        android:text="지도보기"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:onClick="viewMap"/>
+
+    <TextView
+        android:text="위도/경도"
+        android:textSize="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"/>
+    <LinearLayout
+        android:id="@+id/linearLayout02"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp">
+        <EditText
+            android:id="@+id/latitude"
+            android:hint="위도"
+            android:text=""
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"/>
+        <EditText
+            android:id="@+id/longtitude"
+            android:hint="경도"
+            android:text=""
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"/>
+        <Button
+            android:id="@+id/transform"
+            android:text="검색"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:onClick="transformFromCoordinate"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/resultText"
+        android:text="결과"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_margin="16dp"
+        android:gravity="center"/>
+</LinearLayout>
